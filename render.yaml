@@ -1,0 +1,11 @@
+services:
+- type: web
+  name: iris-flask-api
+  env: python
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "python flask_app.py"
+  envVars:
+  - key: FLASK_ENV
+    value: production
+  - key: PORT
+    value: "5000"
